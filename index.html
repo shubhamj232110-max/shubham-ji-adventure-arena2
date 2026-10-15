@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shyam premi 143 — ADVENTURE ARENA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="game-shell">
+      <canvas id="gameCanvas"></canvas>
+
+      <div id="hud">
+        <div id="topbar">
+          <div class="stat-box">
+            <span class="label">Level</span>
+            <span id="levelValue">1</span>
+          </div>
+          <div class="stat-box">
+            <span class="label">Ammo</span>
+            <span id="ammoValue">12 / 48</span>
+          </div>
+          <div class="stat-box">
+            <span class="label">Coins</span>
+            <span id="coinValue">200</span>
+          </div>
+          <div class="stat-box">
+            <span class="label">Enemies</span>
+            <span id="enemyValue">8</span>
+          </div>
+          <div class="stat-box">
+            <span class="label">Kills</span>
+            <span id="killValue">0</span>
+          </div>
+        </div>
+
+        <div id="healthWrap">
+          <div id="healthLabel">Health</div>
+          <div id="healthBarOuter">
+            <div id="healthBarInner"></div>
+          </div>
+        </div>
+
+        <div id="weaponHud">
+          <div id="weaponName">Assault Rifle</div>
+          <div id="weaponSub">AR • 30-round mag</div>
+        </div>
+
+        <div id="statusHud">
+          <span id="zoneText">Safe Zone: 90m</span>
+          <span id="promptText">Loot and survive</span>
+        </div>
+
+        <div id="crosshair" aria-label="Crosshair">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div id="pickupPrompt">Press E to pick up</div>
+
+        <div id="inventoryPanel">
+          <div class="panel-header">
+            <span>Inventory</span>
+            <button id="closeInventory">X</button>
+          </div>
+          <div id="inventoryList"></div>
+        </div>
+
+        <button id="inventoryToggle">Inventory</button>
+
+        <canvas id="minimap" width="180" height="180"></canvas>
+
+        <div id="touchControls" aria-label="Touch controls">
+          <div id="moveJoystick" aria-label="Movement joystick">
+            <div id="joystickThumb"></div>
+          </div>
+          <div id="actionButtons">
+            <button id="fireButton" class="action-button fire-button" aria-label="Fire">FIRE</button>
+            <button id="jumpButton" class="action-button" aria-label="Jump">JUMP</button>
+            <button id="reloadButton" class="action-button" aria-label="Reload">RELOAD</button>
+            <button id="pickupButton" class="action-button" aria-label="Pick up item">PICK</button>
+            <button id="healButton" class="action-button" aria-label="Use medkit">HEAL</button>
+            <button id="weaponButton" class="action-button" aria-label="Switch weapon">WEAPON</button>
+            <button id="aimButton" class="action-button" aria-label="Aim down sights">AIM</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="notification"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+   
